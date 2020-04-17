@@ -32,8 +32,12 @@ Merged the *package.json* files and simply overwrote the *App.tsx* contents with
 ## Updated as Apr 17, 2020
 Ok well I got the absolute formatted paths working and updated the directory structure...
 
-First I was able to get absolute paths to work by simply adding the element **"name": "app** to the **package.json**. This statisfies the compiler... Unfortunately it doesn't make VSC happy. It now shows the "not found" error I removed by moving the files to subdirectories and renaming them to *index.ts(x)*. Well if it going to be pissed anyway, I restructured and renamed files back.
+~~First I was able to get absolute paths to work by simply adding the element **"name": "app** to the **package.json**. This statisfies the compiler... Unfortunately it doesn't make VSC happy. It now shows the "not found" error I removed by moving the files to subdirectories and renaming them to *index.ts(x)*. Well if it going to be pissed anyway, I restructured and renamed files back.~~
 
 I moved all the various code files to under a *src* directory, which I prefer then having them on the *root* where it is a bit messy. As I mentioned I also removed the file named directories with *index.ts(x)* and simply restored them to their almost original names (don't forget I changed the js to ts(x) file extentions).
 
-I'll see if I can figure out how to remove the error/warning from VSC.
+~~I'll see if I can figure out how to remove the error/warning from VSC.~~
+
+So finally got it configured correctly... I hope. So I ended up using the settings and packages as described here https://reactnative.dev/docs/typescript. I went ahead and created the new project using expo again using the **minimal** template as before and added all the settings and packages described. I copied the files I created in this project to test and it worked. I then updated this project with the new configurations and updated files.
+
+This even fixes VSC! Yeah.
