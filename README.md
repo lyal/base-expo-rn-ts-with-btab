@@ -38,4 +38,6 @@ I moved all the various code files to under a *src* directory, which I prefer th
 
 ~~I'll see if I can figure out how to remove the error/warning from VSC.~~
 
-So finally got it configured correctly... I hope. So I ended up using the setting as described here https://reactnative.dev/docs/typescript. I went ahead and created the new project using expo again using the **minimal** template as before and added all the settings and packages described. I copied the files I created in this project to test and it worked. I then updated this project with the new configurations and updated files.
+So finally got it configured correctly... I hope. So I ended up using the settings and packages as described here https://reactnative.dev/docs/typescript. I went ahead and created the new project using expo again using the **minimal** template as before and added all the settings and packages described. I copied the files I created in this project to test and it worked. I then updated this project with the new configurations and updated files.
+
+This even fixes VSC! Yeah.
