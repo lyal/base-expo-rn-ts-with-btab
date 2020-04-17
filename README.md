@@ -2,7 +2,7 @@
 
 This is a simple example of a React Native application generated using Expo.
 
-What I did was to generate two separate probjects. 1 was generated with the **"Bare workflow" minimal (Typescript)** template and the other used the **"Managed workflow" tabs** template.
+What I did was to generate two separate probjects. One was generated with the **"Bare workflow" minimal (Typescript)** template and the other used the **"Managed workflow" tabs** template.
 
 ```
  ? Choose a template:
@@ -14,7 +14,7 @@ What I did was to generate two separate probjects. 1 was generated with the **"B
    minimal               bare and minimal, just the essentials to get you started
  ❯ minimal (TypeScript)  same as minimal but with TypeScript configuration
 ```
-I then merged the tab project into the minimal project. Moving the directories:
+I then merged the **tabs** project into the **minimal** project. Moving the directories:
 - assets
 - components
 - constants
@@ -25,6 +25,6 @@ Merged the *package.json* files and simply overwrote the *App.tsx* contents with
 
 To get everything to work nicely with Typescript, I reformated the \*.js files by creating subdirectories with the same name as the file name, copy the file into that directoy, and renaming the file to *index.ts* or *index.tsx*. For example: *./screens/HomeScreen.js* became *./screens/HomeScreen/index.tsx*. This did cause the need to add an addition offset of directories since the *index.tsx* file is one level deeper.
 
-This all works, removing the file not found errors that appear in the Visual Studio Code IDE, but this is very messy. I'm going to experiment to see if there is a better way but for now this is about a clean as I can get it.
+This all works, removing the "file not found" errors/warnings that appear in the Visual Studio Code IDE, but this is very messy. I'm going to experiment to see if there is a better way but for now this is about a clean as I can get it.
 
 I'd also like to remove the "../.." indirect addressing with absolue directories but so far no luck. All that has happen with try adding base paths to the configuration(s) is to have the whole thing fail.
