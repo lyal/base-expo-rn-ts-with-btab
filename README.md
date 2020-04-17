@@ -23,8 +23,17 @@ I then merged the **tabs** project into the **minimal** project. Moving the dire
 
 Merged the *package.json* files and simply overwrote the *App.tsx* contents with the **tabs** version.
 
-To get everything to work nicely with Typescript, I reformated the \*.js files by creating subdirectories with the same name as the file name, copy the file into that directoy, and renaming the file to *index.ts* or *index.tsx*. For example: *./screens/HomeScreen.js* became *./screens/HomeScreen/index.tsx*. This did cause the need to add an addition offset of directories since the *index.tsx* file is one level deeper.
+~~To get everything to work nicely with Typescript, I reformated the \*.js files by creating subdirectories with the same name as the file name, copy the file into that directoy, and renaming the file to *index.ts* or *index.tsx*. For example: *./screens/HomeScreen.js* became *./screens/HomeScreen/index.tsx*. This did cause the need to add an addition offset of directories since the *index.tsx* file is one level deeper.
 
-This all works, removing the "file not found" errors/warnings that appear in the Visual Studio Code IDE, but this is very messy. I'm going to experiment to see if there is a better way but for now this is about a clean as I can get it.
+~~This all works, removing the "file not found" errors/warnings that appear in the Visual Studio Code IDE, but this is very messy. I'm going to experiment to see if there is a better way but for now this is about a clean as I can get it.
 
-I'd also like to remove the "../.." indirect addressing with absolue directories but so far no luck. All that has happen with try adding base paths to the configuration(s) is to have the whole thing fail.
+~~I'd also like to remove the "../.." indirect addressing with absolue directories but so far no luck. All that has happen with try adding base paths to the configuration(s) is to have the whole thing fail.
+
+##Updated as Apr 17, 2020
+Ok well I got the absolute formatted paths working and updated the directory structure...
+
+First I was able to get absolute paths to work by simply adding the element **"name": "app** to the **package.json**. This statisfies the compiler... Unfortunately it doesn't make VSC happy. It now shows the "not found" error I removed by moving the files to subdirectories and renaming them to *index.ts(x)*. Well if it going to be pissed anyway, I restructured and renamed files back.
+
+I moved all the various code files to under a *src* directory, which I prefer then having them on the *root* where it is a bit messy. As I mentioned I also removed the file named directories with *index.ts(x)* and simply restored them to their almost original names (don't forget I changed the js to ts(x) file extentions).
+
+I'll see if I can figure out how to remove the error/warning from VSC.
